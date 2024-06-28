@@ -22,6 +22,9 @@ export const register =  async (req, res) => {
 
     // for accessing req.body need to use middleware.
     const { name, email, password } = req.body;
+    // check what values arrived from req.body 
+        console.log(req.body); 
+        
     await User.create({
         name, email, password
     });
